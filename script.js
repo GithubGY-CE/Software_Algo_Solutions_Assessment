@@ -24,6 +24,6 @@ function editFile(filePath) {
   }
 }
 
-// Example usage
-const filePath = '/home/gy/repos/Javascript/Software_algo_solutions_assessment/sample-file.txt';
+//Execute the function
+const filePath = 'sample-file.txt';
 editFile(filePath);
