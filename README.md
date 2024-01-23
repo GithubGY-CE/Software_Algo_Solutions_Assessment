@@ -1,31 +1,39 @@
 # Software Algo Solutions Assessment
 
-This Node.js script reads a text file, removes the first and last rows of records, and saves the modified content back to the file.
+This T-SQL script reads a text file, removes the first and last rows of records, and saves the modified content back to the file.
+
+## Prerequisites
+
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15) installed on your machine.
+- Access to a SQL Server instance where you want to run the script.
 
 ## Usage
 
-1. **Install Node.js:**
-   - Download and install Node.js from [https://nodejs.org/](https://nodejs.org/).
+1. **Open SQL Server Management Studio (SSMS):**
+   - Open SQL Server Management Studio on your machine.
 
-2. **Clone or Download the Repository:**
-   - Clone this repository or download the script file (`script.js`) to your local machine.
+2. **Connect to Your Database:**
+   - Connect to the SQL Server instance where you want to run the script.
 
-3. **Run the Script:**
-   - Edit the `filePath` variable in the script to point to your target text file.
-   - Run the script using the following command in the terminal:
-     ```bash
-     node script.js
-     ```
+3. **Query Editor:**
+   - Open a new query window in SSMS.
 
-5. **Verify Results:**
-   - Check the console output for a success message or any error messages.
-   - The modified file will be saved in place, and the original file will be updated.
+4. **Paste the Script:**
+   - Copy the T-SQL script from the .sql file and paste it into the query window.
 
-## Error Handling
+5. **Modify File Paths:**
+   - Update the file paths in the script (`'C:\sample-file.txt'`) to point to the actual locations of your source and destination files.
+   - Replace the server name in (`-Sservername`) with the actual name of your server.
 
-The script includes basic error handling to catch and log any errors that may occur during file processing. If you encounter issues, check the console output for error messages.
+7. **Execute the Script:**
+   - Execute the script by clicking the "Execute" button or pressing F5. This will run the script against your SQL Server database.
+
+8. **Check for Errors:**
+   - Review the messages pane for any errors or informational messages. 
+
+9. **Verify the Results:**
+   - Check the specified output file (e.g., `'C:\sample-file.txt'`) to ensure that the script successfully removed the first and last rows.
 
 ## Notes
-
-- Ensure that the file path specified in the `filePath` variable is correct.
-- This script assumes that each row in the file is separated by a newline (`\n`). Adjust the code accordingly if your file has a different structure.
+- This script assumes that each row in the file is separated by a newline (`\n`) as given in the sample file. 
+- xp_cmdshell must be enabled to execute this script
